@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="interfaz.js"></script>
+</head>
+
+<body>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+
+
+    <br>
+    <p>It's a <b id="myText">White Bear</b></p><br>
+
+    <button id="toggleBear" onclick="toggleBear()">White bear</button>
+    <img id="myImage" src="./images/white.png" style="width:100px">
+
+    <script>
+        function toggleBear() {
+            const img = document.getElementById('myImage');
+            const btn = document.getElementById('toggleBear');
+            const text = document.getElementById('myText');
+            if (img.src.includes('white.png')) {
+                img.src = './images/black.png';
+                btn.textContent = 'Black bear';
+                text.textContent = 'Black Bear';
+            } else {
+                img.src = './images/white.png';
+                btn.textContent = 'White bear';
+                text.textContent = 'White Bear';
+            }
+        }
+    </script>
+</body>
+
+</html>
